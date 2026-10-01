@@ -39,3 +39,16 @@ Default local URLs:
 ```bash
 npm run build
 ```
+
+## Pull request checks
+
+Every pull request runs two independent GitHub Actions workflows:
+
+- **Unit and integration tests** runs `npm test` for the frontend component tests
+  and backend API tests, then builds both workspaces with `npm run build`.
+- **End-to-end tests** installs Chromium and runs `npm run test:e2e`. Playwright
+  starts temporary backend and frontend servers on ports 3000 and 5174. The HTML
+  report and any failure traces are uploaded as the `playwright-results` artifact.
+
+Both workflows can also be started manually from the GitHub Actions tab. New
+commits to a pull request cancel older runs of the same workflow.
