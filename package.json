@@ -11,9 +11,13 @@
     "build": "npm run build --workspace backend && npm run build --workspace frontend",
     "start": "npm run start --workspace backend",
     "test": "npm run test --workspaces",
+    "test:e2e": "playwright test",
     "lint": "npm run lint --workspaces --if-present"
   },
   "engines": {
     "node": ">=18.20"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1"
   }
 }
