@@ -135,12 +135,16 @@ h1 {
   width: 0.6rem;
 }
 
-.message-panel {
+.message-panel,
+.task-panel {
   background: #f8fbfa;
   border: 1px solid rgba(18, 52, 59, 0.1);
   border-radius: 8px;
-  min-height: 190px;
   padding: 1.25rem;
+}
+
+.message-panel {
+  min-height: 168px;
 }
 
 .panel-label {
@@ -161,6 +165,16 @@ h1 {
   margin: 0;
 }
 
+.task-panel ul {
+  color: #34454c;
+  display: grid;
+  gap: 0.7rem;
+  line-height: 1.45;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
 .feature-grid {
   display: grid;
   gap: 0.75rem;
@@ -172,10 +186,19 @@ h1 {
   border: 1px solid rgba(198, 81, 49, 0.14);
   border-radius: 6px;
   color: #6c3c2f;
+  display: grid;
   font-size: 0.9rem;
   font-weight: 800;
+  gap: 0.35rem;
   min-height: 76px;
   padding: 1rem;
+}
+
+.feature-grid strong {
+  color: #10262b;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 @media (max-width: 820px) {
